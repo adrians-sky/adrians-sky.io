@@ -1,0 +1,6 @@
+@import "tailwindcss";
+
+@theme {
+	--color-rosepine-bg: #232136;
+	--color-rosepine-text: #e0def4;
+}
