@@ -2,7 +2,7 @@
 A personal website built with TypeScript and Next.js.
 
 # Lighthouse Summary (Performance Report)
-> This report was generated using the Mozilla Firefox's 
+> This report was generated using the Mozilla Firefox
 [Google Lighthouse](https://addons.mozilla.org/en-US/firefox/addon/google-lighthouse/) 
 extension. 
 
