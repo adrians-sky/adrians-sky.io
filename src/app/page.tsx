@@ -1,7 +1,7 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faArrowUpRightFromSquare } from "@fortawesome/free-solid-svg-icons";
 
-const Home = () => {
+export default function Home() {
     return (
         <div 
             className="
@@ -41,4 +41,3 @@ const Home = () => {
     );
 };
 
-export default Home;
