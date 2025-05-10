@@ -1,10 +1,22 @@
 import { getPosts } from "@/blogs/posts";
+import BlogEntry from "@/components/blogEntry";
 
-export default function Blogs() {
-    getPosts();
 
+export default async function Blogs() {
+    // Retrieve a list of posts
+    const posts = getPosts();
+
+    //
+    // TODO:
+    // - Style this page.
+    //
+    
     return (
-        <h1>Test</h1>
+        <>
+            {posts.map((post) => (
+                <BlogEntry key={post.data.id} post={post}/>
+            ))}
+        </>
     );
-};
+}
 

@@ -2,18 +2,21 @@ const fs = require("fs");
 import path from "path";
 import matter from "gray-matter";
 
-export async function getPosts() {
-    const postsDirectory = path.join(process.cwd(), "src", "blogs", "posts");
-    const blogs = await fs.promises.readdir(postsDirectory);
-    console.log(blogs);
+const postsDirectory = path.join(process.cwd(), "src", "blogs", "posts");
 
-    //
-    // TODO: Implement this:
-    //
-    //        const filePath = path.join(postsDirectory, file);
-    //        const fileContent = fs.readFileSync(filePath, "utf8");
-    //        const content = matter(fileContent); 
-    //
+export function getPosts() {
+    // Get all blog files
+    const files = fs.readdirSync(postsDirectory);
+    
+    // Extract blog file data
+    const posts = files.map((file) => {
+        const filePath = path.join(postsDirectory, file);
+        const fileContents = fs.readFileSync(filePath, "utf8");
+        const matterContent = matter(fileContents);
+        return matterContent;
+    });
+
+    return posts;
 }
 
 export function getPost(id) {
