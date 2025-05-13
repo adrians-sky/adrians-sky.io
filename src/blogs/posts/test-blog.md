@@ -1,13 +1,8 @@
 ---
 id: test-blog
 title: 00 - Testing Blog | adrians-sky
-header: Blog 00 - Testing Blog
-description: My first blog post to test the functionality of my website.
-author: Adrian Curammeng
-creator: Adrian Curammeng
-keywords: adrian curammeng, adrians-sky, website, portfolio, developer, 
-          personal website, typescript, next.js, react, tailwind, vercel, 
-          github
+authors: Adrian Curammeng
+description: My first test blog page.
 ---
 
 # Blog 00 - Page Tester
