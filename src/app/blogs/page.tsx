@@ -1,22 +1,14 @@
-import { getPosts } from "@/blogs/posts";
-import BlogEntry from "@/components/blogEntry";
+import type { NextPage } from "next";
 
-
-export default async function Blogs() {
-    // Retrieve a list of posts
-    const posts = getPosts();
-
-    //
-    // TODO:
-    // - Style this page.
-    //
-    
+const Blogs: NextPage = () => {
     return (
-        <>
-            {posts.map((post) => (
-                <BlogEntry key={post.data.id} post={post}/>
-            ))}
-        </>
+        <div className="w-full flex flex-col items-center justify-center">
+            <h1 className="text-rosepine-text font-mono">blogs</h1>
+            <p className="text-rosepine-muted italic font-mono">
+                a chaotic collection of my thoughts.
+            </p>
+        </div>
     );
 }
 
+export default Blogs;;
