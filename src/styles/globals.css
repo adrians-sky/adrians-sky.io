@@ -1,0 +1,11 @@
+@import "tailwindcss";
+
+@theme {
+	--color-rosepine-bg: #232136;
+	--color-rosepine-text: #e0def4;
+    --color-rosepine-muted: #6e6a86;
+}
+
+h1 {
+    font-size: 2.5rem;
+}
