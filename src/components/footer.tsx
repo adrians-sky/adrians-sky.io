@@ -8,8 +8,6 @@ const Footer: FunctionComponent = () => {
     return (
         <div
             className="w-full
-                       absolute 
-                       bottom-0 
                        flex 
                        justify-center 
                        mx-auto

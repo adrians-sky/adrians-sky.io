@@ -5,10 +5,12 @@ import "@/styles/globals.css"
 const HomeLayout = ({ children, }: { children: React.ReactNode }) => {
     return (
         <html lang="en">
-            <body>
-                <div className="min-h-screen bg-rosepine-bg">
+            <body className="bg-rosepine-bg">
+                <div className="min-h-screen bg-rosepine-bg flex flex-col">
                     <NavBar />
-                    {children}
+                    <div className="flex-1">
+                        {children}
+                    </div>
                     <Footer />
                 </div>
             </body>
