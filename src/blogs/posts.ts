@@ -4,17 +4,20 @@ import matter from "gray-matter";
 
 const postsDirectory: string = path.join(process.cwd(), "src", "blogs", "posts");
 
-type BlogPost = {
+export type BlogPost = {
     id: string;
     title: string;
-    authors: string;
     description: string;
+    published: string;
+    tags: string[];
+    img: string;
+    imgAlt: string;
 };
 
 //
 // Gets a list of all blog posts
 //
-const getPosts = (): BlogPost[] => {
+export const getPosts = (): BlogPost[] => {
     const files: string[] = fs.readdirSync(postsDirectory);
 
     // Extract blog data from each file
@@ -26,12 +29,13 @@ const getPosts = (): BlogPost[] => {
         return {
             id: matterContent.id,
             title: matterContent.title,
-            authors: matterContent.authors,
-            description: matterContent.description
+            description: matterContent.description,
+            published: matterContent.published.toLocaleDateString(),
+            tags: matterContent.tags,
+            img: matterContent.img,
+            imgAlt: matterContent.imgAlt
         }
     });
 
     return posts;
 }
-
-export { type BlogPost, getPosts };
