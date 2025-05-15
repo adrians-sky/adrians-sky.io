@@ -1,5 +1,4 @@
 import Markdown from "react-markdown";
-import Image from "next/image";
 import { getPost } from "@/lib/getPost";
 import type { BlogPost } from "@/lib/blogTypes";
 
