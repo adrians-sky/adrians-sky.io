@@ -1,10 +1,10 @@
 import type { NextPage } from "next";
-import type { BlogPost } from "@/blogs/posts";
-import { getPosts } from "@/blogs/posts";
+import type { BlogMeta } from "@/lib/blogTypes";
+import { getPosts } from "@/lib/getPosts";
 import BlogPreview from "@/components/blogPreview";
 
 const Blogs: NextPage = () => {
-    const blogs: BlogPost[] = getPosts();
+    const blogs: BlogMeta[] = getPosts();
 
     return (
         <div 

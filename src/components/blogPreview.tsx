@@ -1,14 +1,14 @@
 import Link from "next/link";
 import Image from "next/image";
 import { FunctionComponent } from "react";
-import type { BlogPost } from "@/blogs/posts";
+import type { BlogMeta } from "@/lib/blogTypes";
 
-// Create local BlogPost Prop
-type BlogPostProps = {
-    post: BlogPost;
+// Create local BlogMeta Prop
+type BlogMetaProps = {
+    post: BlogMeta;
 }
 
-const BlogPreview: FunctionComponent<BlogPostProps> = ({ post }) => {
+const BlogPreview: FunctionComponent<BlogMetaProps> = ({ post }) => {
     return (
         <div
             className="flex
@@ -22,14 +22,16 @@ const BlogPreview: FunctionComponent<BlogPostProps> = ({ post }) => {
                            relative 
                            border-6
                            border-rosepine-text">
-                <Image 
-                    className="w-full 
-                               object-cover 
-                               border-10
-                               border-rosepine-bg" 
-                    src={post.img} 
-                    alt={post.imgAlt} 
-                    fill={true} />
+                <Link href={"blogs/" + post.id}>
+                    <Image 
+                        className="w-full 
+                                   object-cover 
+                                   border-10
+                                   border-rosepine-bg" 
+                        src={post.img} 
+                        alt={post.imgAlt} 
+                        fill={true} />
+                </Link>
             </div>
             <div
                 className="w-full
@@ -43,7 +45,7 @@ const BlogPreview: FunctionComponent<BlogPostProps> = ({ post }) => {
                                font-mono 
                                underline 
                                hover:text-rosepine-highlight" 
-                    href="#">
+                    href={"blogs/" + post.id}>
                     <h2>{ post.title }</h2>
                 </Link>
                 <p className="text-rosepine-muted font-mono">
