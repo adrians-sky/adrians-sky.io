@@ -7,11 +7,12 @@ import { faArrowUpRightFromSquare } from "@fortawesome/free-solid-svg-icons";
 const Footer: FunctionComponent = () => {
     return (
         <div
-            className="w-full 
+            className="w-full
                        absolute 
                        bottom-0 
                        flex 
                        justify-center 
+                       mx-auto
                        py-8
                        bg-rosepine-bg">
             <p className="text-rosepine-text font-mono">
