@@ -3,9 +3,14 @@
 @theme {
 	--color-rosepine-bg: #232136;
 	--color-rosepine-text: #e0def4;
+    --color-rosepine-highlight: #f0eff7;
     --color-rosepine-muted: #6e6a86;
 }
 
 h1 {
-    font-size: 2.5rem;
+    font-size: 2.5rem !important;
+}
+
+h2 {
+    font-size: 1.3rem !important;
 }
