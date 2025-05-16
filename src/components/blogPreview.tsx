@@ -27,7 +27,8 @@ const BlogPreview: FunctionComponent<BlogMetaProps> = ({ post }) => {
                         className="w-full 
                                    object-cover 
                                    border-10
-                                   border-rosepine-bg" 
+                                   border-rosepine-bg
+                                   cursor-[url('/cursor_select.svg'),_pointer]" 
                         src={post.img} 
                         alt={post.imgAlt} 
                         fill={true} />
@@ -44,7 +45,8 @@ const BlogPreview: FunctionComponent<BlogMetaProps> = ({ post }) => {
                     className="text-rosepine-text 
                                font-mono 
                                underline 
-                               hover:text-rosepine-highlight" 
+                               hover:text-rosepine-highlight
+                               cursor-[url('/cursor_select.svg'),_pointer]" 
                     href={"blogs/" + post.id}>
                     <h2>{ post.title }</h2>
                 </Link>

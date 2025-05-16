@@ -16,7 +16,11 @@ const Footer: FunctionComponent = () => {
             <p className="text-rosepine-text font-mono">
                 View my {" "}
                 <a
-                    className="inline-flex items-center gap-1 underline"
+                    className="inline-flex 
+                               items-center 
+                               gap-1 
+                               underline
+                               cursor-[url('/cursor_select.svg'),_pointer]"
                     href="https://www.linked.com/in/adrians-sky"
                     target="_blank">
                     LinkedIn
@@ -26,7 +30,11 @@ const Footer: FunctionComponent = () => {
                 </a>
                 {" "} or {" "}
                 <a
-                    className="inline-flex items-center gap-1 underline"
+                    className="inline-flex 
+                               items-center 
+                               gap-1 
+                               underline
+                               cursor-[url('/cursor_select.svg'),_pointer]"
                     href="https://github.com/adrians-sky"
                     target="_blank">
                     GitHub
@@ -37,7 +45,11 @@ const Footer: FunctionComponent = () => {
                 {" "} page. {" "}
                 Also, check out the {" "}
                 <a
-                    className="inline-flex items-center gap-1 underline"
+                    className="inline-flex 
+                               items-center 
+                               gap-1 
+                               underline
+                               cursor-[url('/cursor_select.svg'),_pointer]"
                     href="https://github.com/adrians-sky/adrians-sky.io"
                     target="_blank">
                     repository

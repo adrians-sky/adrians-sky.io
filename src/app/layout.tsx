@@ -5,7 +5,9 @@ import "@/styles/globals.css"
 const HomeLayout = ({ children, }: { children: React.ReactNode }) => {
     return (
         <html lang="en">
-            <body className="bg-rosepine-bg">
+            <body 
+                className="bg-rosepine-bg 
+                           cursor-[url('/cursor_basic.svg'),_pointer]">
                 <div className="min-h-screen bg-rosepine-bg flex flex-col">
                     <NavBar />
                     <div className="flex-1">
