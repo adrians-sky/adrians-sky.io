@@ -1,7 +1,26 @@
-import type { NextPage } from "next";
+import type { NextPage, Metadata } from "next";
 import type { BlogMeta } from "@/lib/blogTypes";
+
 import { getPosts } from "@/lib/getPosts";
 import BlogPreview from "@/components/blogPreview";
+
+export const metadata: Metadata = {
+    title: "Blogs | adrians-sky",
+    description: "A full list of my blogs.",
+    keywords: ["adrian curammeng", "adrians-sky", "blog"],
+    creator: "Adrian Curammeng",
+    alternates: {
+        canonical: "https://adrians-sky.vercel.app/blogs"
+    },
+    openGraph: {
+        title: "Blogs | adrians-sky",
+        description: "A full list of my blogs.",
+        url: "https://adrians-sky.vercel.app/blogs",
+        siteName: "adrians-sky",
+        locale: "en_CA",
+        type: "website"
+    }
+}
 
 const Blogs: NextPage = () => {
     const blogs: BlogMeta[] = getPosts();
